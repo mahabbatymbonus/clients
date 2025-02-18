@@ -6,11 +6,11 @@
     <title>Регистрация</title>
     <style>
         body { 
-            background: url('https://images.pexels.com/photos/30722358/pexels-photo-30722358.jpeg') no-repeat center center fixed; 
+            background: url('https://images.pexels.com/photos/8116307/pexels-photo-8116307.jpeg') no-repeat center center fixed; 
             background-size: cover;
-            font-family: Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             text-align: center;
-            color: #333;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,74 +20,75 @@
         }
 
         .bonus-text {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             color: #fff;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
+            background: rgba(0, 128, 128, 0.8);
+            padding: 12px 18px;
+            border-radius: 8px;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-container { 
-            background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
-            padding: 25px; 
-            border-radius: 10px; 
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-            max-width: 350px; 
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+            max-width: 400px; 
             width: 100%;
-            border: 2px solid green; /* Зеленая рамка */
+            border: 2px solid #008080; 
         }
 
         h2 { 
-            color: #555; 
-            margin-bottom: 15px;
+            color: #008080; 
+            margin-bottom: 20px;
         }
 
         input { 
             display: block; 
             width: calc(100% - 20px); 
-            padding: 10px; 
-            margin: 10px 0; 
+            padding: 12px; 
+            margin: 12px 0; 
             border: 1px solid #ddd; 
-            border-radius: 5px; 
+            border-radius: 6px; 
         }
 
         button { 
-            background: #ff7ea8; 
-            color: white; 
-            border: none; 
+            background: transparent;
+            color: #008080; 
+            border: 2px solid #008080; 
             padding: 12px; 
-            border-radius: 5px; 
+            border-radius: 6px; 
             cursor: pointer; 
-            font-size: 16px; 
+            font-size: 18px; 
             width: 100%; 
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         button:hover { 
-            background: #ff5c8a; 
+            background: #008080; 
+            color: white;
         }
 
         .contact-info {
-            margin-top: 20px;
-            color: #fff;
+            margin-top: 25px;
         }
 
-        .contact-info a {
+        .contact-info p, .contact-info a {
             color: #fff;
             text-decoration: none;
-            margin: 5px 10px;
+            font-size: 16px;
+            margin: 8px 0;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .contact-info img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -124,7 +125,6 @@
             let whatsapp = document.getElementById('whatsapp').value;
             let data = { name: name, whatsapp: whatsapp };
             
-            // Replace with your Google Apps Script Web App URL
             let googleSheetURL = "https://script.google.com/macros/s/AKfycbzjE-MjTkdnpl2zrzAhgpiHXzR-1gGPKL50oyMUmlrpLmLTWEwkVOxcMNvn63NlWi65/exec";
             
             fetch(googleSheetURL, {
@@ -134,10 +134,8 @@
                 body: JSON.stringify(data)
             });
                 
-            // Сохраняем данные (можно заменить на отправку в Google Sheets)
             console.log("Имя:", name, "WhatsApp:", whatsapp);
             
-            // Перенаправление в WhatsApp
             let whatsappUrl = "https://wa.me/7018778799/?text=Привет!%20хочу%20бонусы";
             window.location.href = whatsappUrl;
         });
