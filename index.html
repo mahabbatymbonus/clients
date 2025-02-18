@@ -19,6 +19,17 @@
             flex-direction: column;
         }
 
+        .bonus-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
         .form-container { 
             background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
             padding: 25px; 
@@ -30,13 +41,6 @@
 
         h2 { 
             color: #555; 
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
             margin-bottom: 15px;
         }
 
@@ -64,10 +68,30 @@
         button:hover { 
             background: #ff5c8a; 
         }
+
+        .contact-info {
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
-    <p>Зарегистрируйтесь и получите 1500 бонусов на первый заказ!</p>
+    <p class="bonus-text">Зарегистрируйтесь и получите 1500 бонусов на первый заказ!</p>
     <div class="form-container">
         <h2>Заполните форму</h2>
         <form id="form">
@@ -75,6 +99,20 @@
             <input type="tel" id="whatsapp" placeholder="Ваш номер WhatsApp" required>
             <button type="submit">Отправить</button>
         </form>
+    </div>
+
+    <div class="contact-info">
+        <p><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address"> А. Бокейхана 17/1</p>
+        <p>
+            <a href="https://instagram.com/mahabbatym.ast" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> @mahabbatym.ast
+            </a>
+        </p>
+        <p>
+            <a href="tel:+77018778799">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone"> +7 701 877 87 99
+            </a>
+        </p>
     </div>
 
     <script>
